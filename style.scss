@@ -1,15 +1,39 @@
-:root {
-    --Secondary: 254, 149, 38;
-    --Primary: 0, 82, 255;
-    --Info: 255, 203, 47;
-    --Success: 83, 216, 106;
-    --Error: 255, 52, 52;
-    --sh1: inset 0px -1px 0px #EAEAEA;
-    --sh2: inset 0px 1px 0px #EAEAEA;
-    --sh3: 0px 2px 10px rgba(25, 1, 52, 0.12);
-    --sh4: 0px -2px 10px rgba(25, 1, 52, 0.12);
-    --sh5: 0px 4px 10px rgba(1, 21, 52, 0.16);
-    --sh6: 0px -4px 10px rgba(25, 1, 52, 0.16);
+$Secondary: rgb(254, 149, 38);
+$Primary: rgb(0, 82, 255);
+$Info: rgb(255, 203, 47);
+$Success:rgb(83, 216, 106);
+$Error: rgb(255, 52, 52);
+$sh1: inset 0px -1px 0px #EAEAEA;
+$sh2: inset 0px 1px 0px #EAEAEA;
+$sh3: 0px 2px 10px rgba(25, 1, 52, 0.12);
+$sh4: 0px -2px 10px rgba(25, 1, 52, 0.12);
+$sh5: 0px 4px 10px rgba(1, 21, 52, 0.16);
+$sh6: 0px -4px 10px rgba(25, 1, 52, 0.16);
+%inter {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    color: #00194C;
+    font-weight: 600;
+}
+
+%sf {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    color: #00194C;
+    font-weight: 600;
+}
+
+%p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #00194C;
 }
 
 body {
@@ -20,29 +44,12 @@ body {
     box-sizing: border-box;
 }
 
-.inter {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    color: #00194C;
-    font-weight: 600;
-}
-
-.sf {
-    font-family: "SF Pro Display";
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    color: #00194C;
-    font-weight: 600;
-}
-
 h1 {
     width: 540px;
     height: 84px;
     font-size: 32px;
     line-height: 42px;
+    @extend %inter;
 }
 
 h2 {
@@ -50,6 +57,7 @@ h2 {
     height: 72px;
     font-size: 28px;
     line-height: 36px;
+    @extend %sf;
 }
 
 h3 {
@@ -57,6 +65,7 @@ h3 {
     height: 30px;
     font-size: 22px;
     line-height: 30px;
+    @extend %sf;
 }
 
 h4 {
@@ -64,6 +73,7 @@ h4 {
     height: 28px;
     font-size: 20px;
     line-height: 28px;
+    @extend %sf;
 }
 
 h5 {
@@ -71,6 +81,7 @@ h5 {
     height: 26px;
     font-size: 18px;
     line-height: 26px;
+    @extend %sf;
 }
 
 h6 {
@@ -78,15 +89,7 @@ h6 {
     height: 24px;
     font-size: 16px;
     line-height: 24px;
-}
-
-p {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #00194C;
+    @extend %sf;
 }
 
 .p1 {
@@ -94,6 +97,7 @@ p {
     height: 28px;
     font-size: 20px;
     line-height: 28px;
+    @extend %p;
 }
 
 .p2 {
@@ -101,6 +105,7 @@ p {
     height: 26px;
     font-size: 18px;
     line-height: 26px;
+    @extend %p;
 }
 
 .p3 {
@@ -108,6 +113,7 @@ p {
     height: 24px;
     font-size: 16px;
     line-height: 24px;
+    @extend %p;
 }
 
 .p4 {
@@ -115,41 +121,47 @@ p {
     height: 22px;
     font-size: 14px;
     line-height: 22px;
+    @extend %p;
 }
 
 
 /* кольори разом з опасіті */
 
-.colorsbox {
+%colorsbox {
     width: 130px;
     height: 130px;
     margin: 20px;
 }
 
 .d1 {
-    background: rgba(var(--Secondary), 1);
+    background: rgba($Secondary, 1);
+    @extend %colorsbox;
 }
 
 .d2 {
-    background: rgba(var(--Primary), 1);
+    background: rgba($Primary, 1);
+    @extend %colorsbox;
 }
 
 .d3 {
-    background: rgba(var(--Info), 1);
+    background: rgba($Info, 1);
+    @extend %colorsbox;
 }
 
 .d4 {
-    background: rgba(var(--Success), 1);
+    background: rgba($Success, 1);
+    @extend %colorsbox;
 }
 
 .d5 {
-    background: rgba(var(--Error), 1);
+    background: rgba($Error, 1);
+    @extend %colorsbox;
 }
 
 
 /* тіні */
 
-.shadowbox {
+%shadowbox {
     width: 80px;
     height: 80px;
     border-radius: 4px;
@@ -158,27 +170,33 @@ p {
 }
 
 .shadow1 {
-    box-shadow: var(--sh1);
+    box-shadow: $sh1;
+    @extend %shadowbox;
 }
 
 .shadow2 {
-    box-shadow: var(--sh2);
+    box-shadow: $sh2;
+    @extend %shadowbox;
 }
 
 .shadow3 {
-    box-shadow: var(--sh3);
+    box-shadow: $sh3;
+    @extend %shadowbox;
 }
 
 .shadow4 {
-    box-shadow: var(--sh4);
+    box-shadow: $sh4;
+    @extend %shadowbox;
 }
 
 .shadow5 {
-    box-shadow: var(--sh5);
+    box-shadow: $sh5;
+    @extend %shadowbox;
 }
 
 .shadow6 {
-    box-shadow: var(--sh6);
+    box-shadow: $sh6;
+    @extend %shadowbox;
 }
 
 
@@ -199,10 +217,9 @@ p {
     font-weight: 400;
     letter-spacing: 0px;
     outline: none;
-}
-
-.button:hover {
-    background-color: rgba(77, 134, 255, 1);
+    &:hover {
+        background-color: rgba(77, 134, 255, 1);
+    }
 }
 
 .button__primary--left-icon {
@@ -219,20 +236,18 @@ p {
     border: 1px solid #0052FF;
     background-color: #FFFFFF;
     color: rgba(0, 82, 255, 1);
-}
-
-.button__ghost:hover,
-.button__ghost:focus {
-    background: rgba(230, 238, 255, 1);
-    box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
+    &:hover,
+    &:focus {
+        background: rgba(230, 238, 255, 1);
+        box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
+    }
 }
 
 .button__ghost--left-icon {
     text-align: center;
-}
-
-.button__ghost--left-icon:hover {
-    border-color: transparent;
+    &:hover {
+        border-color: transparent;
+    }
 }
 
 .button__ghost--left-icon .vector-left {
@@ -246,11 +261,10 @@ p {
     width: 14px;
     height: 14px;
     margin-left: 11px;
-}
-
-.button__ghost--right-icon:hover,
-.button__ghost--right-icon:focus {
-    border-color: transparent;
+    &:hover,
+    &:focus {
+        border-color: transparent;
+    }
 }
 
 
@@ -269,30 +283,28 @@ p {
     line-height: 22px;
     letter-spacing: 0px;
     box-sizing: border-box;
-}
-
-.input:focus,
-.input:hover {
-    outline: none;
-    border: 1px solid #0052FF;
+    &:focus,
+    &:hover {
+        outline: none;
+        border: 1px solid #0052FF;
+    }
 }
 
 .btn-icon {
     display: inline-block;
     position: relative;
-}
-
-.btn-icon::before {
-    position: absolute;
-    top: 16px;
-    right: 22px;
-    content: "";
-    display: block;
-    width: 16px;
-    height: 18px;
-    background-size: 16px 18px;
-    background-image: url('./Icons/right-icon.svg');
-    background-repeat: no-repeat;
+    &::before {
+        position: absolute;
+        top: 16px;
+        right: 22px;
+        content: "";
+        display: block;
+        width: 16px;
+        height: 18px;
+        background-size: 16px 18px;
+        background-image: url('./Icons/right-icon.svg');
+        background-repeat: no-repeat;
+    }
 }
 
 .right-icon {
@@ -302,19 +314,18 @@ p {
 .btn-icon2 {
     display: inline-block;
     position: relative;
-}
-
-.btn-icon2::before {
-    position: absolute;
-    top: 16px;
-    left: 22px;
-    content: "";
-    display: block;
-    width: 16px;
-    height: 18px;
-    background-size: 16px 18px;
-    background-image: url('./Icons/person.svg');
-    background-repeat: no-repeat;
+    &::before {
+        position: absolute;
+        top: 16px;
+        left: 22px;
+        content: "";
+        display: block;
+        width: 16px;
+        height: 18px;
+        background-size: 16px 18px;
+        background-image: url('./Icons/person.svg');
+        background-repeat: no-repeat;
+    }
 }
 
 .left-icon {
@@ -352,10 +363,9 @@ p {
     padding-left: 23px;
     padding-right: 50px;
     cursor: pointer;
-}
-
-.drop-button:focus {
-    outline: none;
+    &:focus {
+        outline: none;
+    }
 }
 
 .down {
@@ -414,31 +424,28 @@ p {
     border-radius: 4px;
     background-color: #FFFFFF;
     position: relative;
-}
-
-.checkbox input {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.checkbox span {
-    width: 100%;
-    display: none;
-    position: absolute;
-    line-height: 23px;
-    text-align: center;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-}
-
-.checkbox input:checked+span {
-    display: block;
-    background-color: blue;
+    span {
+        width: 100%;
+        display: none;
+        position: absolute;
+        line-height: 23px;
+        text-align: center;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+span {
+            display: block;
+            background-color: blue;
+        }
+    }
 }
 
 .radio {
@@ -450,29 +457,27 @@ p {
     border-radius: 50%;
     width: 24px;
     height: 24px;
-}
-
-.radio input {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.radio input:checked+span {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    display: block;
-    background-color: #0052FF;
-    border-radius: 50%;
-    /* left: 3px;
-    top: 3px; */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+span {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            display: block;
+            background-color: #0052FF;
+            border-radius: 50%;
+            /* left: 3px;
+            top: 3px; */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .switch {
@@ -482,32 +487,29 @@ p {
     border: 1px solid grey;
     border-radius: 15px;
     background-color: #fff;
-}
-
-.switch input {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    position: absolute;
-    cursor: pointer;
-}
-
-.switch span {
-    width: 24px;
-    height: 24px;
-    background: #E6EEFF;
-    position: absolute;
-    z-index: 1;
-    border-radius: 50%;
-    top: 50%;
-    left: 1px;
-    transform: translateY(-50%);
-    transition: all 0.3s;
-}
-
-.switch input:checked+span {
-    right: 1px;
-    left: auto;
-    background-color: #0052FF;
+    span {
+        width: 24px;
+        height: 24px;
+        background: #E6EEFF;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        top: 50%;
+        left: 1px;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+    }
+    input {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+        &:checked+span {
+            right: 1px;
+            left: auto;
+            background-color: #0052FF;
+        }
+    }
 }
