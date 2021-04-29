@@ -1,13 +1,20 @@
 @charset "UTF-8";
-h1 {
-  font-family: 'Inter', sans-serif;
+body {
+  padding: 50px; }
+
+* {
+  box-sizing: border-box; }
+
+/* text */
+.inter {
+  font-family: "Inter";
   font-style: normal;
   display: flex;
   align-items: center;
   color: #00194C;
   font-weight: 600; }
 
-h2, h3, h4, h5, h6 {
+.sf {
   font-family: "SF Pro Display";
   font-style: normal;
   display: flex;
@@ -15,7 +22,7 @@ h2, h3, h4, h5, h6 {
   color: #00194C;
   font-weight: 600; }
 
-.p1, .p2, .p3, .p4 {
+.p {
   font-family: "Inter";
   font-style: normal;
   font-weight: normal;
@@ -23,117 +30,101 @@ h2, h3, h4, h5, h6 {
   text-align: left;
   color: #00194C; }
 
-body {
-  padding: 50px; }
-
-* {
-  box-sizing: border-box; }
-
-h1 {
+.typograhpy_h1 {
   width: 540px;
-  height: 84px;
   font-size: 32px;
   line-height: 42px; }
 
-h2 {
+.typograhpy_h2 {
   width: 540px;
-  height: 72px;
   font-size: 28px;
   line-height: 36px; }
 
-h3 {
+.typograhpy_h3 {
   width: 540px;
-  height: 30px;
   font-size: 22px;
   line-height: 30px; }
 
-h4 {
+.typograhpy_h4 {
   width: 540px;
-  height: 28px;
   font-size: 20px;
   line-height: 28px; }
 
-h5 {
+.typograhpy_h5 {
   width: 540px;
-  height: 26px;
   font-size: 18px;
   line-height: 26px; }
 
-h6 {
+.typograhpy_h6 {
   width: 540px;
-  height: 24px;
   font-size: 16px;
   line-height: 24px; }
 
-.p1 {
+.typograhpy_p1 {
   width: 540px;
-  height: 28px;
   font-size: 20px;
   line-height: 28px; }
 
-.p2 {
+.typograhpy_p2 {
   width: 540px;
-  height: 26px;
   font-size: 18px;
   line-height: 26px; }
 
-.p3 {
+.typograhpy_p3 {
   width: 540px;
-  height: 24px;
   font-size: 16px;
   line-height: 24px; }
 
-.p4 {
+.typograhpy_p4 {
   width: 540px;
-  height: 22px;
   font-size: 14px;
   line-height: 22px; }
 
 /* кольори разом з опасіті */
-.d1, .d2, .d3, .d4, .d5 {
+.colors {
   width: 130px;
   height: 130px;
   margin: 20px; }
 
-.d1 {
+.Secondary {
   background: #fe9526; }
 
-.d2 {
+.Primary {
   background: #0052ff; }
 
-.d3 {
+.Alert {
   background: #ffcb2f; }
 
-.d4 {
+.Success {
   background: #53d86a; }
 
-.d5 {
+.Error {
   background: #ff3434; }
 
 /* тіні */
-.shadow1, .shadow2, .shadow3, .shadow4, .shadow5, .shadow6 {
+.shadow {
   width: 80px;
   height: 80px;
   border-radius: 4px;
   background: #F2F2F2;
   margin: 20px; }
 
-.shadow1 {
+.BottomBorder {
   box-shadow: inset 0px -1px 0px #EAEAEA; }
 
-.shadow2 {
+.BottomLevel1 {
   box-shadow: inset 0px 1px 0px #EAEAEA; }
 
-.shadow3 {
+.BottomLevel2 {
   box-shadow: 0px 2px 10px rgba(25, 1, 52, 0.12); }
 
-.shadow4 {
+.TopBorder {
   box-shadow: 0px -2px 10px rgba(25, 1, 52, 0.12); }
 
-.shadow5 {
+.TopLevel1 {
   box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16); }
 
-.shadow6 {
+.TopLevel2 {
   box-shadow: 0px -4px 10px rgba(25, 1, 52, 0.16); }
 
 /* button */
@@ -147,7 +138,7 @@ h6 {
   line-height: 24px;
   align-items: center;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -196,7 +187,7 @@ h6 {
   border-radius: 4px;
   width: 320px;
   height: 50px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -250,8 +241,6 @@ h6 {
   height: 232px; }
 
 .drop-button {
-  background: none;
-  border: none;
   text-decoration: none;
   position: relative;
   border: 1px solid #0052FF;
@@ -260,7 +249,7 @@ h6 {
   background: #FFFFFF;
   width: 325px;
   height: 54px;
-  color: #0052ff;
+  color: #0052FF;
   font-family: "Inter";
   font-size: 14px;
   font-style: normal;
@@ -282,7 +271,7 @@ h6 {
   display: block;
   text-decoration: none;
   color: #00194c;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
