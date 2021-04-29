@@ -1,41 +1,18 @@
 $Secondary: rgb(254, 149, 38);
 $Primary: rgb(0, 82, 255);
-$Info: rgb(255, 203, 47);
+$Alert: rgb(255, 203, 47);
 $Success:rgb(83, 216, 106);
 $Error: rgb(255, 52, 52);
-$sh1: inset 0px -1px 0px #EAEAEA;
-$sh2: inset 0px 1px 0px #EAEAEA;
-$sh3: 0px 2px 10px rgba(25, 1, 52, 0.12);
-$sh4: 0px -2px 10px rgba(25, 1, 52, 0.12);
-$sh5: 0px 4px 10px rgba(1, 21, 52, 0.16);
-$sh6: 0px -4px 10px rgba(25, 1, 52, 0.16);
-%inter {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    color: #00194C;
-    font-weight: 600;
-}
-
-%sf {
-    font-family: "SF Pro Display";
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    color: #00194C;
-    font-weight: 600;
-}
-
-%p {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #00194C;
-}
-
+$BottomBorder: inset 0px -1px 0px #EAEAEA;
+$BottomLevel1: inset 0px 1px 0px #EAEAEA;
+$BottomLevel2: 0px 2px 10px rgba(25, 1, 52, 0.12);
+$TopBorder: 0px -2px 10px rgba(25, 1, 52, 0.12);
+$TopLevel1: 0px 4px 10px rgba(1, 21, 52, 0.16);
+$TopLevel2: 0px -4px 10px rgba(25, 1, 52, 0.16);
+$ShadowColor: #F2F2F2;
+$textColor: #00194C;
+$textInter: "Inter";
+$textSF: "SF Pro Display";
 body {
     padding: 50px;
 }
@@ -44,161 +21,163 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
+
+/* text */
+
+.inter {
+    font-family: $textInter;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    font-weight: 600;
+}
+
+.sf {
+    font-family: $textSF;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    font-weight: 600;
+}
+
+.p {
+    font-family: $textInter;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $textColor;
+}
+
+.typograhpy_h1 {
     width: 540px;
-    height: 84px;
     font-size: 32px;
     line-height: 42px;
-    @extend %inter;
 }
 
-h2 {
+.typograhpy_h2 {
     width: 540px;
-    height: 72px;
     font-size: 28px;
     line-height: 36px;
-    @extend %sf;
 }
 
-h3 {
+.typograhpy_h3 {
     width: 540px;
-    height: 30px;
     font-size: 22px;
     line-height: 30px;
-    @extend %sf;
 }
 
-h4 {
+.typograhpy_h4 {
     width: 540px;
-    height: 28px;
     font-size: 20px;
     line-height: 28px;
-    @extend %sf;
 }
 
-h5 {
+.typograhpy_h5 {
     width: 540px;
-    height: 26px;
     font-size: 18px;
     line-height: 26px;
-    @extend %sf;
 }
 
-h6 {
+.typograhpy_h6 {
     width: 540px;
-    height: 24px;
     font-size: 16px;
     line-height: 24px;
-    @extend %sf;
 }
 
-.p1 {
+.typograhpy_p1 {
     width: 540px;
-    height: 28px;
     font-size: 20px;
     line-height: 28px;
-    @extend %p;
 }
 
-.p2 {
+.typograhpy_p2 {
     width: 540px;
-    height: 26px;
     font-size: 18px;
     line-height: 26px;
-    @extend %p;
 }
 
-.p3 {
+.typograhpy_p3 {
     width: 540px;
-    height: 24px;
     font-size: 16px;
     line-height: 24px;
-    @extend %p;
 }
 
-.p4 {
+.typograhpy_p4 {
     width: 540px;
-    height: 22px;
     font-size: 14px;
     line-height: 22px;
-    @extend %p;
 }
 
 
 /* кольори разом з опасіті */
 
-%colorsbox {
+.colors {
     width: 130px;
     height: 130px;
     margin: 20px;
 }
 
-.d1 {
+.Secondary {
     background: rgba($Secondary, 1);
-    @extend %colorsbox;
 }
 
-.d2 {
+.Primary {
     background: rgba($Primary, 1);
-    @extend %colorsbox;
 }
 
-.d3 {
-    background: rgba($Info, 1);
-    @extend %colorsbox;
+.Alert {
+    background: rgba($Alert, 1);
 }
 
-.d4 {
+.Success {
     background: rgba($Success, 1);
-    @extend %colorsbox;
 }
 
-.d5 {
+.Error {
     background: rgba($Error, 1);
-    @extend %colorsbox;
 }
 
 
 /* тіні */
 
-%shadowbox {
+.shadow {
     width: 80px;
     height: 80px;
     border-radius: 4px;
-    background: #F2F2F2;
+    background: $ShadowColor;
     margin: 20px;
 }
 
-.shadow1 {
-    box-shadow: $sh1;
-    @extend %shadowbox;
+.BottomBorder {
+    box-shadow: $BottomBorder;
 }
 
-.shadow2 {
-    box-shadow: $sh2;
-    @extend %shadowbox;
+.BottomLevel1 {
+    box-shadow: $BottomLevel1;
 }
 
-.shadow3 {
-    box-shadow: $sh3;
-    @extend %shadowbox;
+.BottomLevel2 {
+    box-shadow: $BottomLevel2;
 }
 
-.shadow4 {
-    box-shadow: $sh4;
-    @extend %shadowbox;
+.TopBorder {
+    box-shadow: $TopBorder;
 }
 
-.shadow5 {
-    box-shadow: $sh5;
-    @extend %shadowbox;
+.TopLevel1 {
+    box-shadow: $TopLevel1;
 }
 
-.shadow6 {
-    box-shadow: $sh6;
-    @extend %shadowbox;
+.TopLevel2 {
+    box-shadow: $TopLevel2;
 }
 
+$buttonBackColor:rgba(0, 82, 255, 1);
+$buttonColor:#FFFFFF;
+$buttonBackColorHover:rgba(77, 134, 255, 1);
 
 /* button */
 
@@ -206,19 +185,19 @@ h6 {
     padding: 12px 40px;
     border: none;
     border-radius: 4px;
-    background: rgba(0, 82, 255, 1);
-    color: #FFFFFF;
+    background: $buttonBackColor;
+    color: $buttonColor;
     font-size: 16px;
     line-height: 24px;
     align-items: center;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-family: $textInter;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0px;
     outline: none;
     &:hover {
-        background-color: rgba(77, 134, 255, 1);
+        background-color: $buttonBackColorHover;
     }
 }
 
@@ -232,14 +211,19 @@ h6 {
     margin-right: 11px;
 }
 
+$buttonGhostBorder: 1px solid #0052FF;
+$buttonGhostBackColor:#FFFFFF;
+$buttonGhostColor:rgba(0, 82, 255, 1);
+$buttonGhostBackHover:rgba(230, 238, 255, 1);
+$buttonGhostBoxShadowHover:0px 4px 10px rgba(1, 21, 52, 0.16);
 .button__ghost {
-    border: 1px solid #0052FF;
-    background-color: #FFFFFF;
-    color: rgba(0, 82, 255, 1);
+    border: $buttonGhostBorder;
+    background-color: $buttonGhostBackColor;
+    color: $buttonGhostColor;
     &:hover,
     &:focus {
-        background: rgba(230, 238, 255, 1);
-        box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
+        background: $buttonGhostBackHover;
+        box-shadow: $buttonGhostBoxShadowHover;
     }
 }
 
@@ -270,13 +254,15 @@ h6 {
 
 /* input */
 
+$inputBorder:1px solid rgba(189, 189, 189, 1);
+$inputBorderHover:1px solid #0052FF;
 .input {
     padding: 14px 16px;
-    border: 1px solid rgba(189, 189, 189, 1);
+    border: $inputBorder;
     border-radius: 4px;
     width: 320px;
     height: 50px;
-    font-family: 'Inter', sans-serif;
+    font-family: $textInter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -286,7 +272,7 @@ h6 {
     &:focus,
     &:hover {
         outline: none;
-        border: 1px solid #0052FF;
+        border: $inputBorderHover;
     }
 }
 
@@ -335,6 +321,22 @@ h6 {
 
 /* Dropdown */
 
+$dropButtonBorder:1px solid #0052FF;
+$dropButtonColor:#0052FF;
+$dropButtonBackground: #FFFFFF;
+$dropDownTextColor:rgba(0,
+25,
+76,
+1);
+$dropDownBorder:1px solid rgba(0,
+82,
+255,
+0.08);
+$dropDownContentBack:#C4C4C4;
+$dropDownContentShadow:0px 4px 10px rgba(1,
+21,
+52,
+0.16);
 .dropdown {
     position: relative;
     width: 325px;
@@ -342,18 +344,16 @@ h6 {
 }
 
 .drop-button {
-    background: none;
-    border: none;
     text-decoration: none;
     position: relative;
-    border: 1px solid #0052FF;
+    border: $dropButtonBorder;
     box-sizing: border-box;
     border-radius: 4px;
-    background: #FFFFFF;
+    background: $dropButtonBackground;
     width: 325px;
     height: 54px;
-    color: rgba(0, 82, 255, 1);
-    font-family: "Inter";
+    color: $dropButtonColor;
+    font-family: $textInter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -371,19 +371,19 @@ h6 {
 .down {
     height: 54px;
     width: 325px;
-    background: #FFFFFF;
+    background: $dropButtonBackground;
     border-radius: 4px 4px 0px 0px;
     display: block;
     text-decoration: none;
-    color: rgba(0, 25, 76, 1);
-    font-family: 'Inter', sans-serif;
+    color: $dropDownTextColor;
+    font-family: $textInter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0px;
     padding: 16px 271px 16px 24px;
-    border: 1px solid rgba(0, 82, 255, 0.08);
+    border: $dropDownBorder;
 }
 
 .drop-button span {
@@ -395,8 +395,8 @@ h6 {
 }
 
 .dropdown-content {
-    background: #C4C4C4;
-    box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
+    background: $dropDownContentBack;
+    box-shadow: $dropDownContentShadow;
     margin-top: 16px;
 }
 
@@ -417,12 +417,15 @@ h6 {
     checkbox 
 */
 
+$checkboxBorder:1px solid #0052FF;
+$checkboxBackColor:#FFFFFF;
+$checkboxInputBackColor:blue;
 .checkbox {
     width: 25px;
     height: 25px;
-    border: 1px solid #0052FF;
+    border: $checkboxBorder;
     border-radius: 4px;
-    background-color: #FFFFFF;
+    background-color: $checkboxBackColor;
     position: relative;
     span {
         width: 100%;
@@ -443,17 +446,20 @@ h6 {
         cursor: pointer;
         &:checked+span {
             display: block;
-            background-color: blue;
+            background-color: $checkboxInputBackColor;
         }
     }
 }
 
+$radioBackColor:#fff;
+$radioBorder:2px solid #0052FF;
+$radioBackColorChecked:#0052FF;
 .radio {
     margin: 40px;
     margin-left: 0px;
     position: relative;
-    background-color: #fff;
-    border: 2px solid #0052FF;
+    background-color: $radioBackColor;
+    border: $radioBorder;
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -469,7 +475,7 @@ h6 {
             width: 14px;
             height: 14px;
             display: block;
-            background-color: #0052FF;
+            background-color: $radioBackColorChecked;
             border-radius: 50%;
             /* left: 3px;
             top: 3px; */
@@ -480,17 +486,21 @@ h6 {
     }
 }
 
+$switchBorder:1px solid grey;
+$switchBackColor:#fff;
+$switchSpanBackColor:#E6EEFF;
+$switchInputCheckedBackColor:#0052FF;
 .switch {
     position: relative;
     height: 28px;
     width: 48px;
-    border: 1px solid grey;
+    border: $switchBorder;
     border-radius: 15px;
-    background-color: #fff;
+    background-color: $switchBackColor;
     span {
         width: 24px;
         height: 24px;
-        background: #E6EEFF;
+        background: $switchSpanBackColor;
         position: absolute;
         z-index: 1;
         border-radius: 50%;
@@ -509,7 +519,7 @@ h6 {
         &:checked+span {
             right: 1px;
             left: auto;
-            background-color: #0052FF;
+            background-color: $switchInputCheckedBackColor;
         }
     }
 }
