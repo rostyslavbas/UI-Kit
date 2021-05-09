@@ -140,7 +140,7 @@ body {
   margin-right: 11px; }
 
 .buttonGhost {
-  border: 1px solid #0052FF;
+  border: 1px solid #0052ff;
   background-color: #FFFFFF;
   color: #0052ff; }
   .buttonGhost:hover, .buttonGhost:focus {
@@ -181,7 +181,7 @@ body {
   box-sizing: border-box; }
   .input:focus, .input:hover {
     outline: none;
-    border: 1px solid #0052FF; }
+    border: 1px solid #0052ff; }
 
 .btnIcon {
   display: inline-block;
@@ -228,7 +228,7 @@ body {
 .dropButton {
   text-decoration: none;
   position: relative;
-  border: 1px solid #0052FF;
+  border: 1px solid #0052ff;
   box-sizing: border-box;
   border-radius: 4px;
   background: #FFFFFF;
@@ -291,7 +291,7 @@ body {
 .checkbox {
   width: 25px;
   height: 25px;
-  border: 1px solid #0052FF;
+  border: 1px solid #0052ff;
   border-radius: 4px;
   background-color: #FFFFFF;
   position: relative; }
