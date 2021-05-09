@@ -1,15 +1,15 @@
 @charset "UTF-8";
 body {
-  padding: 50px; }
+  padding: 35px; }
 
 * {
   box-sizing: border-box; }
 
 /* text */
-.text {
+.container {
+  height: auto;
   width: 540px;
   font-style: normal;
-  display: flex;
   color: #00194C;
   align-items: center; }
 
