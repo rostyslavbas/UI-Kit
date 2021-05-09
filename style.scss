@@ -1,15 +1,17 @@
-$Secondary: rgb(254, 149, 38);
-$Primary: rgb(0, 82, 255);
-$Alert: rgb(255, 203, 47);
-$Success:rgb(83, 216, 106);
-$Error: rgb(255, 52, 52);
-$BottomBorder: inset 0px -1px 0px #EAEAEA;
-$BottomLevel1: inset 0px 1px 0px #EAEAEA;
-$BottomLevel2: 0px 2px 10px rgba(25, 1, 52, 0.12);
-$TopBorder: 0px -2px 10px rgba(25, 1, 52, 0.12);
-$TopLevel1: 0px 4px 10px rgba(1, 21, 52, 0.16);
-$TopLevel2: 0px -4px 10px rgba(25, 1, 52, 0.16);
-$ShadowColor: #F2F2F2;
+$orange: rgb(254, 149, 38);
+$blue: rgb(0, 82, 255);
+$yellow: rgb(255, 203, 47);
+$green:rgb(83, 216, 106);
+$red: rgb(255, 52, 52);
+$shadowBottomInset: inset 0px -1px 0px #EAEAEA;
+$shadowTopInset: inset 0px 1px 0px #EAEAEA;
+$shadowBottom1: 0px 2px 10px rgba(25, 1, 52, 0.12);
+$shadowTop1: 0px -2px 10px rgba(25, 1, 52, 0.12);
+$shadowBottom2: 0px 4px 10px rgba(1, 21, 52, 0.16);
+$shadowTop2: 0px -4px 10px rgba(25, 1, 52, 0.16);
+$lightGray: #F2F2F2;
+$white:#FFFFFF;
+$blueBorder:1px solid #0052FF;
 $textColor: #00194C;
 $textInter: "Inter";
 $textSF: "SF Pro Display";
@@ -24,89 +26,75 @@ body {
 
 /* text */
 
-.inter {
-    font-family: $textInter;
+.text {
+    width: 540px;
     font-style: normal;
     display: flex;
-    align-items: center;
     color: $textColor;
+    align-items: center;
+}
+
+.inter {
+    font-family: $textInter;
     font-weight: 600;
 }
 
 .sf {
     font-family: $textSF;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    color: $textColor;
     font-weight: 600;
 }
 
-.p {
+.paragraph {
     font-family: $textInter;
-    font-style: normal;
     font-weight: normal;
-    letter-spacing: 0px;
-    text-align: left;
-    color: $textColor;
 }
 
-.typograhpy_h1 {
-    width: 540px;
+.typographyH1 {
     font-size: 32px;
     line-height: 42px;
 }
 
-.typograhpy_h2 {
-    width: 540px;
+.typographyH2 {
     font-size: 28px;
     line-height: 36px;
 }
 
-.typograhpy_h3 {
-    width: 540px;
+.typographyH3 {
     font-size: 22px;
     line-height: 30px;
 }
 
-.typograhpy_h4 {
-    width: 540px;
+.typographyH4 {
     font-size: 20px;
     line-height: 28px;
 }
 
-.typograhpy_h5 {
-    width: 540px;
+.typographyH5 {
     font-size: 18px;
     line-height: 26px;
 }
 
-.typograhpy_h6 {
-    width: 540px;
+.typographyH6 {
     font-size: 16px;
     line-height: 24px;
 }
 
-.typograhpy_p1 {
-    width: 540px;
+.typographyP1 {
     font-size: 20px;
     line-height: 28px;
 }
 
-.typograhpy_p2 {
-    width: 540px;
+.typographyP2 {
     font-size: 18px;
     line-height: 26px;
 }
 
-.typograhpy_p3 {
-    width: 540px;
+.typographyP3 {
     font-size: 16px;
     line-height: 24px;
 }
 
-.typograhpy_p4 {
-    width: 540px;
+.typographyP4 {
     font-size: 14px;
     line-height: 22px;
 }
@@ -120,64 +108,61 @@ body {
     margin: 20px;
 }
 
-.Secondary {
-    background: rgba($Secondary, 1);
+.orange {
+    background: rgba($orange, 1);
 }
 
-.Primary {
-    background: rgba($Primary, 1);
+.blue {
+    background: rgba($blue, 1);
 }
 
-.Alert {
-    background: rgba($Alert, 1);
+.yellow {
+    background: rgba($yellow, 1);
 }
 
-.Success {
-    background: rgba($Success, 1);
+.green {
+    background: rgba($green, 1);
 }
 
-.Error {
-    background: rgba($Error, 1);
+.red {
+    background: rgba($red, 1);
 }
 
 
 /* тіні */
 
-.shadow {
+.shadows {
     width: 80px;
     height: 80px;
     border-radius: 4px;
-    background: $ShadowColor;
+    background: $lightGray;
     margin: 20px;
 }
 
-.BottomBorder {
-    box-shadow: $BottomBorder;
+.shadowBottomInset {
+    box-shadow: $shadowBottomInset;
 }
 
-.BottomLevel1 {
-    box-shadow: $BottomLevel1;
+.shadowTopInset {
+    box-shadow: $shadowTopInset;
 }
 
-.BottomLevel2 {
-    box-shadow: $BottomLevel2;
+.shadowBottom1 {
+    box-shadow: $shadowBottom1;
 }
 
-.TopBorder {
-    box-shadow: $TopBorder;
+.shadowTop1 {
+    box-shadow: $shadowTop1;
 }
 
-.TopLevel1 {
-    box-shadow: $TopLevel1;
+.shadowBottom2 {
+    box-shadow: $shadowBottom2;
 }
 
-.TopLevel2 {
-    box-shadow: $TopLevel2;
+.shadowTop2 {
+    box-shadow: $shadowTop2;
 }
 
-$buttonBackColor:rgba(0, 82, 255, 1);
-$buttonColor:#FFFFFF;
-$buttonBackColorHover:rgba(77, 134, 255, 1);
 
 /* button */
 
@@ -185,8 +170,8 @@ $buttonBackColorHover:rgba(77, 134, 255, 1);
     padding: 12px 40px;
     border: none;
     border-radius: 4px;
-    background: $buttonBackColor;
-    color: $buttonColor;
+    background: $blue;
+    color: $white;
     font-size: 16px;
     line-height: 24px;
     align-items: center;
@@ -197,50 +182,47 @@ $buttonBackColorHover:rgba(77, 134, 255, 1);
     letter-spacing: 0px;
     outline: none;
     &:hover {
-        background-color: $buttonBackColorHover;
+        background-color: rgba(77, 134, 255, 1);
+        ;
     }
 }
 
-.button__primary--left-icon {
+.buttonPrimaryLeftIcon {
     text-align: center;
 }
 
-.button__primary--left-icon .vector-left {
+.buttonPrimaryLeftIcon .vectorLeft {
     width: 14px;
     height: 14px;
     margin-right: 11px;
 }
 
-$buttonGhostBorder: 1px solid #0052FF;
-$buttonGhostBackColor:#FFFFFF;
-$buttonGhostColor:rgba(0, 82, 255, 1);
-$buttonGhostBackHover:rgba(230, 238, 255, 1);
-$buttonGhostBoxShadowHover:0px 4px 10px rgba(1, 21, 52, 0.16);
-.button__ghost {
-    border: $buttonGhostBorder;
-    background-color: $buttonGhostBackColor;
-    color: $buttonGhostColor;
+.buttonGhost {
+    border: $blueBorder;
+    background-color: $white;
+    color: $blue;
     &:hover,
     &:focus {
-        background: $buttonGhostBackHover;
-        box-shadow: $buttonGhostBoxShadowHover;
+        background: rgba(230, 238, 255, 1);
+        ;
+        box-shadow: $shadowBottom2;
     }
 }
 
-.button__ghost--left-icon {
+.buttonGhostLeftIcon {
     text-align: center;
     &:hover {
         border-color: transparent;
     }
 }
 
-.button__ghost--left-icon .vector-left {
+.buttonGhostLeftIcon .vectorLeft {
     width: 14px;
     height: 14px;
     margin-right: 11px;
 }
 
-.button__ghost--right-icon .vector-left {
+.buttonGhostRightIcon .vectorLeft {
     transform: rotate(180deg);
     width: 14px;
     height: 14px;
@@ -254,11 +236,9 @@ $buttonGhostBoxShadowHover:0px 4px 10px rgba(1, 21, 52, 0.16);
 
 /* input */
 
-$inputBorder:1px solid rgba(189, 189, 189, 1);
-$inputBorderHover:1px solid #0052FF;
 .input {
     padding: 14px 16px;
-    border: $inputBorder;
+    border: 1px solid rgba(189, 189, 189, 1);
     border-radius: 4px;
     width: 320px;
     height: 50px;
@@ -272,11 +252,11 @@ $inputBorderHover:1px solid #0052FF;
     &:focus,
     &:hover {
         outline: none;
-        border: $inputBorderHover;
+        border: $blueBorder;
     }
 }
 
-.btn-icon {
+.btnIcon {
     display: inline-block;
     position: relative;
     &::before {
@@ -288,16 +268,16 @@ $inputBorderHover:1px solid #0052FF;
         width: 16px;
         height: 18px;
         background-size: 16px 18px;
-        background-image: url('./Icons/right-icon.svg');
+        background-image: url('./Icons/eyeOff.svg');
         background-repeat: no-repeat;
     }
 }
 
-.right-icon {
+.rightIcon {
     padding-left: 52px;
 }
 
-.btn-icon2 {
+.btnIcon2 {
     display: inline-block;
     position: relative;
     &::before {
@@ -314,45 +294,29 @@ $inputBorderHover:1px solid #0052FF;
     }
 }
 
-.left-icon {
+.leftIcon {
     padding-right: 52px;
 }
 
 
 /* Dropdown */
 
-$dropButtonBorder:1px solid #0052FF;
-$dropButtonColor:#0052FF;
-$dropButtonBackground: #FFFFFF;
-$dropDownTextColor:rgba(0,
-25,
-76,
-1);
-$dropDownBorder:1px solid rgba(0,
-82,
-255,
-0.08);
-$dropDownContentBack:#C4C4C4;
-$dropDownContentShadow:0px 4px 10px rgba(1,
-21,
-52,
-0.16);
 .dropdown {
     position: relative;
     width: 325px;
     height: 232px;
 }
 
-.drop-button {
+.dropButton {
     text-decoration: none;
     position: relative;
-    border: $dropButtonBorder;
+    border: $blueBorder;
     box-sizing: border-box;
     border-radius: 4px;
-    background: $dropButtonBackground;
+    background: $white;
     width: 325px;
     height: 54px;
-    color: $dropButtonColor;
+    color: $blue;
     font-family: $textInter;
     font-size: 14px;
     font-style: normal;
@@ -366,16 +330,23 @@ $dropDownContentShadow:0px 4px 10px rgba(1,
     &:focus {
         outline: none;
     }
+    span {
+        position: absolute;
+        height: 6px;
+        width: 12px;
+        right: 23px;
+        top: 16px;
+    }
 }
 
 .down {
     height: 54px;
     width: 325px;
-    background: $dropButtonBackground;
+    background: $white;
     border-radius: 4px 4px 0px 0px;
     display: block;
     text-decoration: none;
-    color: $dropDownTextColor;
+    color: $textColor;
     font-family: $textInter;
     font-size: 14px;
     font-style: normal;
@@ -383,32 +354,24 @@ $dropDownContentShadow:0px 4px 10px rgba(1,
     line-height: 22px;
     letter-spacing: 0px;
     padding: 16px 271px 16px 24px;
-    border: $dropDownBorder;
+    border: 1px solid rgba(0, 82, 255, 0.08);
 }
 
-.drop-button span {
-    position: absolute;
-    height: 6px;
-    width: 12px;
-    right: 23px;
-    top: 16px;
-}
-
-.dropdown-content {
-    background: $dropDownContentBack;
-    box-shadow: $dropDownContentShadow;
+.dropdownContent {
+    background: #C4C4C4;
+    box-shadow: $shadowBottom2;
     margin-top: 16px;
 }
 
-.down1 {
+.contentFirst {
     border-radius: 4px 4px 0px 0px;
 }
 
-.down2 {
+.contentSecond {
     border-radius: 0px;
 }
 
-.down3 {
+.contentThird {
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -417,15 +380,12 @@ $dropDownContentShadow:0px 4px 10px rgba(1,
     checkbox 
 */
 
-$checkboxBorder:1px solid #0052FF;
-$checkboxBackColor:#FFFFFF;
-$checkboxInputBackColor:blue;
 .checkbox {
     width: 25px;
     height: 25px;
-    border: $checkboxBorder;
+    border: $blueBorder;
     border-radius: 4px;
-    background-color: $checkboxBackColor;
+    background-color: $white;
     position: relative;
     span {
         width: 100%;
@@ -446,20 +406,17 @@ $checkboxInputBackColor:blue;
         cursor: pointer;
         &:checked+span {
             display: block;
-            background-color: $checkboxInputBackColor;
+            background-color: $blue;
         }
     }
 }
 
-$radioBackColor:#fff;
-$radioBorder:2px solid #0052FF;
-$radioBackColorChecked:#0052FF;
 .radio {
     margin: 40px;
     margin-left: 0px;
     position: relative;
-    background-color: $radioBackColor;
-    border: $radioBorder;
+    background-color: $white;
+    border: 2px solid $blue;
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -475,7 +432,7 @@ $radioBackColorChecked:#0052FF;
             width: 14px;
             height: 14px;
             display: block;
-            background-color: $radioBackColorChecked;
+            background-color: $blue;
             border-radius: 50%;
             /* left: 3px;
             top: 3px; */
@@ -486,21 +443,18 @@ $radioBackColorChecked:#0052FF;
     }
 }
 
-$switchBorder:1px solid grey;
-$switchBackColor:#fff;
-$switchSpanBackColor:#E6EEFF;
-$switchInputCheckedBackColor:#0052FF;
 .switch {
     position: relative;
     height: 28px;
     width: 48px;
-    border: $switchBorder;
+    border: 1px solid grey;
     border-radius: 15px;
-    background-color: $switchBackColor;
+    background-color: $white;
     span {
         width: 24px;
         height: 24px;
-        background: $switchSpanBackColor;
+        background: #E6EEFF;
+        ;
         position: absolute;
         z-index: 1;
         border-radius: 50%;
@@ -519,7 +473,7 @@ $switchInputCheckedBackColor:#0052FF;
         &:checked+span {
             right: 1px;
             left: auto;
-            background-color: $switchInputCheckedBackColor;
+            background-color: $blue;
         }
     }
 }
