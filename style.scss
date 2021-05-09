@@ -16,7 +16,7 @@ $textColor: #00194C;
 $textInter: "Inter";
 $textSF: "SF Pro Display";
 body {
-    padding: 50px;
+    padding: 35px;
 }
 
 * {
@@ -26,10 +26,10 @@ body {
 
 /* text */
 
-.text {
+.container {
+    height: auto;
     width: 540px;
     font-style: normal;
-    display: flex;
     color: $textColor;
     align-items: center;
 }
