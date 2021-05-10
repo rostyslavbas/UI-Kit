@@ -1,67 +1,61 @@
 @charset "UTF-8";
 body {
-  padding: 35px; }
+  padding: 35px;
+  font-family: "Inter", sans-serif;
+  color: #00194C; }
 
 * {
   box-sizing: border-box; }
 
+html {
+  font-size: 16px; }
+
 /* text */
 .container {
-  height: auto;
-  width: 540px;
-  font-style: normal;
-  color: #00194C;
-  align-items: center; }
+  width: 540px; }
 
-.inter {
-  font-family: "Inter";
+.titles {
+  font-family: "SF Pro Display", sans-serif;
   font-weight: 600; }
 
-.sf {
-  font-family: "SF Pro Display";
-  font-weight: 600; }
-
-.paragraph {
-  font-family: "Inter";
-  font-weight: normal; }
-
-.typographyH1 {
+.h1 {
+  font-weight: 600;
   font-size: 32px;
   line-height: 42px; }
 
-.typographyH2 {
+.h2 {
   font-size: 28px;
   line-height: 36px; }
 
-.typographyH3 {
+.h3 {
   font-size: 22px;
   line-height: 30px; }
 
-.typographyH4 {
+.h4 {
   font-size: 20px;
   line-height: 28px; }
 
-.typographyH5 {
+.h5 {
   font-size: 18px;
   line-height: 26px; }
 
-.typographyH6 {
+.h6 {
   font-size: 16px;
   line-height: 24px; }
 
-.typographyP1 {
+.p1 {
   font-size: 20px;
   line-height: 28px; }
 
-.typographyP2 {
+.p2 {
   font-size: 18px;
   line-height: 26px; }
 
-.typographyP3 {
+.p3 {
   font-size: 16px;
   line-height: 24px; }
 
-.typographyP4 {
+.p4 {
   font-size: 14px;
   line-height: 22px; }
 
@@ -123,7 +117,6 @@ body {
   line-height: 24px;
   align-items: center;
   cursor: pointer;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -172,7 +165,6 @@ body {
   border-radius: 4px;
   width: 320px;
   height: 50px;
-  font-family: "Inter";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -235,7 +227,6 @@ body {
   width: 325px;
   height: 54px;
   color: #0052ff;
-  font-family: "Inter";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -261,8 +252,6 @@ body {
   border-radius: 4px 4px 0px 0px;
   display: block;
   text-decoration: none;
-  color: #00194C;
-  font-family: "Inter";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
