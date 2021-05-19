@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html {
+  font-size: 16px; }
+
 body {
   padding: 35px;
   font-family: "Inter", sans-serif;
@@ -6,9 +9,6 @@ body {
 
 * {
   box-sizing: border-box; }
-
-html {
-  font-size: 16px; }
 
 /* text */
 .container {
@@ -124,12 +124,9 @@ html {
   .button:hover {
     background-color: #4d86ff; }
 
-.buttonPrimaryLeftIcon {
-  text-align: center; }
-
-.buttonPrimaryLeftIcon .vectorLeft {
+.vectorLeft {
+  margin-right: 11px;
   width: 14px;
-  height: 14px;
   margin-right: 11px; }
 
 .buttonGhost {
@@ -140,22 +137,20 @@ html {
     background: #e6eeff;
     box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16); }
 
-.buttonGhostLeftIcon {
-  text-align: center; }
-  .buttonGhostLeftIcon:hover {
-    border-color: transparent; }
-
-.buttonGhostLeftIcon .vectorLeft {
-  width: 14px;
-  height: 14px;
-  margin-right: 11px; }
-
-.buttonGhostRightIcon .vectorLeft {
-  transform: rotate(180deg);
+.vectorRight {
   width: 14px;
   height: 14px;
   margin-left: 11px; }
-  .buttonGhostRightIcon .vectorLeft:hover, .buttonGhostRightIcon .vectorLeft:focus {
+
+.buttonGhostRightIcon,
+.buttonGhostLeftIcon,
+.buttonGhost {
+  text-align: center; }
+  .buttonGhostRightIcon:hover, .buttonGhostRightIcon:focus,
+  .buttonGhostLeftIcon:hover,
+  .buttonGhostLeftIcon:focus,
+  .buttonGhost:hover,
+  .buttonGhost:focus {
     border-color: transparent; }
 
 /* input */
@@ -175,38 +170,27 @@ html {
     outline: none;
     border: 1px solid #0052ff; }
 
-.btnIcon {
+.inputIcon {
   display: inline-block;
   position: relative; }
-  .btnIcon::before {
+  .inputIcon::before {
     position: absolute;
     top: 16px;
-    right: 22px;
     content: "";
     display: block;
     width: 16px;
     height: 18px;
     background-size: 16px 18px;
-    background-image: url("./Icons/eyeOff.svg");
     background-repeat: no-repeat; }
+  .inputIcon.btnIcon::before {
+    background-image: url("./Icons/eyeOff.svg");
+    right: 22px; }
+  .inputIcon.btnIcon2::before {
+    background-image: url("./Icons/person.svg");
+    left: 22px; }
 
 .rightIcon {
   padding-left: 52px; }
-
-.btnIcon2 {
-  display: inline-block;
-  position: relative; }
-  .btnIcon2::before {
-    position: absolute;
-    top: 16px;
-    left: 22px;
-    content: "";
-    display: block;
-    width: 16px;
-    height: 18px;
-    background-size: 16px 18px;
-    background-image: url("./Icons/person.svg");
-    background-repeat: no-repeat; }
 
 .leftIcon {
   padding-right: 52px; }
@@ -266,12 +250,15 @@ html {
   margin-top: 16px; }
 
 .contentFirst {
-  border-radius: 4px 4px 0px 0px; }
+  border-radius: 4px 4px 0px 0px;
+  color: #00194C; }
 
 .contentSecond {
-  border-radius: 0px; }
+  border-radius: 0px;
+  color: #00194C; }
 
 .contentThird {
+  color: #00194C;
   border-radius: 0px 0px 4px 4px; }
 
 /* 
