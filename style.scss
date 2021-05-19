@@ -4,26 +4,29 @@ $yellow: rgb(255, 203, 47);
 $green:rgb(83, 216, 106);
 $red: rgb(255, 52, 52);
 $lightGray: #F2F2F2;
+$shadowGray:#EAEAEA;
 $white:#FFFFFF;
+$textColor:#00194C;
 $blueBorder:1px solid $blue;
-$shadowBottomInset: inset 0px -1px 0px #EAEAEA;
-$shadowTopInset: inset 0px 1px 0px #EAEAEA;
+$inputBorder: 1px solid rgba(189, 189, 189, 1);
+$shadowBottomInset: inset 0px -1px 0px $shadowGray;
+$shadowTopInset: inset 0px 1px 0px $shadowGray;
 $shadowBottom1: 0px 2px 10px rgba(25, 1, 52, 0.12);
 $shadowTop1: 0px -2px 10px rgba(25, 1, 52, 0.12);
 $shadowBottom2: 0px 4px 10px rgba(1, 21, 52, 0.16);
 $shadowTop2: 0px -4px 10px rgba(25, 1, 52, 0.16);
+html {
+    font-size: 16px;
+}
+
 body {
     padding: 35px;
     font-family: "Inter", sans-serif;
-    color: #00194C;
+    color: $textColor;
 }
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
 }
 
 
@@ -172,17 +175,12 @@ html {
     outline: none;
     &:hover {
         background-color: rgba(77, 134, 255, 1);
-        ;
     }
 }
 
-.buttonPrimaryLeftIcon {
-    text-align: center;
-}
-
-.buttonPrimaryLeftIcon .vectorLeft {
+.vectorLeft {
+    margin-right: 11px;
     width: 14px;
-    height: 14px;
     margin-right: 11px;
 }
 
@@ -193,29 +191,20 @@ html {
     &:hover,
     &:focus {
         background: rgba(230, 238, 255, 1);
-        ;
         box-shadow: $shadowBottom2;
     }
 }
 
-.buttonGhostLeftIcon {
-    text-align: center;
-    &:hover {
-        border-color: transparent;
-    }
-}
-
-.buttonGhostLeftIcon .vectorLeft {
-    width: 14px;
-    height: 14px;
-    margin-right: 11px;
-}
-
-.buttonGhostRightIcon .vectorLeft {
-    transform: rotate(180deg);
+.vectorRight {
     width: 14px;
     height: 14px;
     margin-left: 11px;
+}
+
+.buttonGhostRightIcon,
+.buttonGhostLeftIcon,
+.buttonGhost {
+    text-align: center;
     &:hover,
     &:focus {
         border-color: transparent;
@@ -227,7 +216,7 @@ html {
 
 .input {
     padding: 14px 16px;
-    border: 1px solid rgba(189, 189, 189, 1);
+    border: $inputBorder;
     border-radius: 4px;
     width: 320px;
     height: 50px;
@@ -244,42 +233,31 @@ html {
     }
 }
 
-.btnIcon {
+.inputIcon {
     display: inline-block;
     position: relative;
     &::before {
         position: absolute;
         top: 16px;
-        right: 22px;
         content: "";
         display: block;
         width: 16px;
         height: 18px;
         background-size: 16px 18px;
-        background-image: url('./Icons/eyeOff.svg');
         background-repeat: no-repeat;
+    }
+    &.btnIcon::before {
+        background-image: url('./Icons/eyeOff.svg');
+        right: 22px;
+    }
+    &.btnIcon2::before {
+        background-image: url('./Icons/person.svg');
+        left: 22px;
     }
 }
 
 .rightIcon {
     padding-left: 52px;
-}
-
-.btnIcon2 {
-    display: inline-block;
-    position: relative;
-    &::before {
-        position: absolute;
-        top: 16px;
-        left: 22px;
-        content: "";
-        display: block;
-        width: 16px;
-        height: 18px;
-        background-size: 16px 18px;
-        background-image: url('./Icons/person.svg');
-        background-repeat: no-repeat;
-    }
 }
 
 .leftIcon {
@@ -350,13 +328,16 @@ html {
 
 .contentFirst {
     border-radius: 4px 4px 0px 0px;
+    color: $textColor;
 }
 
 .contentSecond {
     border-radius: 0px;
+    color: $textColor;
 }
 
 .contentThird {
+    color: $textColor;
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -439,7 +420,6 @@ html {
         width: 24px;
         height: 24px;
         background: #E6EEFF;
-        ;
         position: absolute;
         z-index: 1;
         border-radius: 50%;
