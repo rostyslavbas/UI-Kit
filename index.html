@@ -6,61 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./output.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-    <h1 class="inter">The quick brown fox jumps over the lazy dog</h1>
-    <h2 class="sf">The quick brown fox jumps over the lazy dog</h2>
-    <h3 class="sf">The quick brown fox jumps over the lazy dog</h3>
-    <h4 class="sf">The quick brown fox jumps over the lazy dog</h4>
-    <h5 class="sf">The quick brown fox jumps over the lazy dog</h5>
-    <h6 class="sf">The quick brown fox jumps over the lazy dog</h6>
-    <p class="p1">The quick brown fox jumps over the lazy dog</p>
-    <p class="p2">The quick brown fox jumps over the lazy dog</p>
-    <p class="p3">The quick brown fox jumps over the lazy dog</p>
-    <p class="p4">The quick brown fox jumps over the lazy dog</p>
+    <div class="container">
+        <h1 class="h1">The quick brown fox jumps over the lazy dog</h1>
+        <h2 class="h2 titles">The quick brown fox jumps over the lazy dog</h2>
+        <h3 class="h3 titles">The quick brown fox jumps over the lazy dog</h3>
+        <h4 class="h4 titles">The quick brown fox jumps over the lazy dog</h4>
+        <h5 class="h5 titles">The quick brown fox jumps over the lazy dog</h5>
+        <h6 class="h6 titles">The quick brown fox jumps over the lazy dog</h6>
+        <p class="p1">The quick brown fox jumps over the lazy dog</p>
+        <p class="p2">The quick brown fox jumps over the lazy dog</p>
+        <p class="p3">The quick brown fox jumps over the lazy dog</p>
+        <p class="p4">The quick brown fox jumps over the lazy dog</p>
+    </div>
 
     <h2>Colors</h2>
-    <div class='colorsbox d1'></div>
-    <div class='colorsbox d2'></div>
-    <div class='colorsbox d3'></div>
-    <div class='colorsbox d4'></div>
-    <div class='colorsbox d5'></div>
+    <div class="colors orange"></div>
+    <div class="colors blue"></div>
+    <div class="colors yellow"></div>
+    <div class="colors green"></div>
+    <div class="colors red"></div>
 
     <h2>Shadows</h2>
-    <div class='shadowbox shadow1'></div>
-    <div class='shadowbox shadow2'></div>
-    <div class='shadowbox shadow3'></div>
-    <div class='shadowbox shadow4'></div>
-    <div class='shadowbox shadow5'></div>
-    <div class='shadowbox shadow6'></div>
+    <div class="shadows shadowBottomInset"></div>
+    <div class="shadows shadowTopInset"></div>
+    <div class="shadows shadowBottom1"></div>
+    <div class="shadows shadowTop1"></div>
+    <div class="shadows shadowBottom2"></div>
+    <div class="shadows shadowTop2"></div>
 
     <h2>Button</h2>
-    <button class="button button__primary">Button</button>
-    <button class="button button__ghost">Button</button>
-    <button class="button button__primary button__primary--left-icon"><img class="vector-left" src="./Icons/primeLeft.svg" alt="vector left">Button</button>
-    <button class="button button__ghost button__ghost--left-icon"><img class="vector-left" src="./Icons/ghost-left.svg" alt="vector left">Button</button>
-    <button class="button button__ghost button__ghost--right-icon">Button<img class="vector-left" src="./Icons/ghost-left.svg" alt="vector right"></button>
+    <button class="button buttonPrimary">Button</button>
+    <button class="button buttonGhost">Button</button>
+    <button class="button buttonPrimary buttonPrimaryLeftIcon"><img class="vectorLeft" src="./Icons/vectorPrimeLeft.svg" alt="vector left">Button</button>
+    <button class="button buttonGhost buttonGhostLeftIcon"><img class="vectorLeft" src="./Icons/vectorGhostLeft.svg" alt="vector left">Button</button>
+    <button class="button buttonGhost buttonGhostRightIcon">Button<img class="vectorRight" src="./Icons/vectorGhostRight.svg" alt="vector right"></button>
 
     <h2>Input</h2>
     <input class="input" type="text" placeholder="Normal">
 
-    <span for="input-left-icon" class="btn-icon">
-        <input id="input-left-icon" class="input left-icon" type="text" placeholder="Normal">
+    <span for="inputLeftIcon" class="btnIcon inputIcon">
+        <input id="inputLeftIcon" class="input leftIcon" type="text" placeholder="Normal">
     </span>
 
-    <span for="input-right-icon" class="btn-icon2">
-        <input id="input-right-icon" class="input right-icon" type="text" placeholder="Normal">
+    <span for="inputRightIcon" class="btnIcon2 inputIcon">
+        <input id="inputRightIcon" class="input rightIcon" type="text" placeholder="Normal">
     </span>
 
     <h2>Dropdown</h2>
     <div class="dropdown">
-        <button class="drop-button">Select
+        <button class="dropButton">Select
            
             <span>
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,10 +70,10 @@
             </span>
         </button>
 
-        <div class="dropdown-content">
-            <a class="down down1" href="#">First</a>
-            <a class="down down2" href="#">Second</a>
-            <a class="down down3" href="#">Third</a>
+        <div class="dropdownContent">
+            <a class="down contentFirst" href="#">First</a>
+            <a class="down contentSecond" href="#">Second</a>
+            <a class="down contentThird" href="#">Third</a>
         </div>
     </div>
 

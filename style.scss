@@ -1,0 +1,444 @@
+$orange: rgb(254, 149, 38);
+$blue: rgb(0, 82, 255);
+$yellow: rgb(255, 203, 47);
+$green:rgb(83, 216, 106);
+$red: rgb(255, 52, 52);
+$lightGray: #F2F2F2;
+$shadowGray:#EAEAEA;
+$white:#FFFFFF;
+$textColor:#00194C;
+$blueBorder:1px solid $blue;
+$inputBorder: 1px solid rgba(189, 189, 189, 1);
+$shadowBottomInset: inset 0px -1px 0px $shadowGray;
+$shadowTopInset: inset 0px 1px 0px $shadowGray;
+$shadowBottom1: 0px 2px 10px rgba(25, 1, 52, 0.12);
+$shadowTop1: 0px -2px 10px rgba(25, 1, 52, 0.12);
+$shadowBottom2: 0px 4px 10px rgba(1, 21, 52, 0.16);
+$shadowTop2: 0px -4px 10px rgba(25, 1, 52, 0.16);
+html {
+    font-size: 16px;
+}
+
+body {
+    padding: 35px;
+    font-family: "Inter", sans-serif;
+    color: $textColor;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* text */
+
+.container {
+    width: 540px;
+}
+
+.titles {
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 600;
+}
+
+.h1 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.h2 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.h3 {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.h4 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.h5 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.p1 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.p2 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.p3 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.p4 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+/* кольори разом з опасіті */
+
+.colors {
+    width: 130px;
+    height: 130px;
+    margin: 20px;
+}
+
+.orange {
+    background: rgba($orange, 1);
+}
+
+.blue {
+    background: rgba($blue, 1);
+}
+
+.yellow {
+    background: rgba($yellow, 1);
+}
+
+.green {
+    background: rgba($green, 1);
+}
+
+.red {
+    background: rgba($red, 1);
+}
+
+
+/* тіні */
+
+.shadows {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    background: $lightGray;
+    margin: 20px;
+}
+
+.shadowBottomInset {
+    box-shadow: $shadowBottomInset;
+}
+
+.shadowTopInset {
+    box-shadow: $shadowTopInset;
+}
+
+.shadowBottom1 {
+    box-shadow: $shadowBottom1;
+}
+
+.shadowTop1 {
+    box-shadow: $shadowTop1;
+}
+
+.shadowBottom2 {
+    box-shadow: $shadowBottom2;
+}
+
+.shadowTop2 {
+    box-shadow: $shadowTop2;
+}
+
+
+/* button */
+
+.button {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    background: $blue;
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    outline: none;
+    &:hover {
+        background-color: rgba(77, 134, 255, 1);
+    }
+}
+
+.vectorLeft {
+    margin-right: 11px;
+    width: 14px;
+    margin-right: 11px;
+}
+
+.buttonGhost {
+    border: $blueBorder;
+    background-color: $white;
+    color: $blue;
+    &:hover,
+    &:focus {
+        background: rgba(230, 238, 255, 1);
+        box-shadow: $shadowBottom2;
+    }
+}
+
+.vectorRight {
+    width: 14px;
+    height: 14px;
+    margin-left: 11px;
+}
+
+.buttonGhostRightIcon,
+.buttonGhostLeftIcon,
+.buttonGhost {
+    text-align: center;
+    &:hover,
+    &:focus {
+        border-color: transparent;
+    }
+}
+
+
+/* input */
+
+.input {
+    padding: 14px 16px;
+    border: $inputBorder;
+    border-radius: 4px;
+    width: 320px;
+    height: 50px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    box-sizing: border-box;
+    &:focus,
+    &:hover {
+        outline: none;
+        border: $blueBorder;
+    }
+}
+
+.inputIcon {
+    display: inline-block;
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 16px;
+        content: "";
+        display: block;
+        width: 16px;
+        height: 18px;
+        background-size: 16px 18px;
+        background-repeat: no-repeat;
+    }
+    &.btnIcon::before {
+        background-image: url('./Icons/eyeOff.svg');
+        right: 22px;
+    }
+    &.btnIcon2::before {
+        background-image: url('./Icons/person.svg');
+        left: 22px;
+    }
+}
+
+.rightIcon {
+    padding-left: 52px;
+}
+
+.leftIcon {
+    padding-right: 52px;
+}
+
+
+/* Dropdown */
+
+.dropdown {
+    position: relative;
+    width: 325px;
+    height: 232px;
+}
+
+.dropButton {
+    text-decoration: none;
+    position: relative;
+    border: $blueBorder;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: $white;
+    width: 325px;
+    height: 54px;
+    color: $blue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-left: 23px;
+    padding-right: 50px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    span {
+        position: absolute;
+        height: 6px;
+        width: 12px;
+        right: 23px;
+        top: 16px;
+    }
+}
+
+.down {
+    height: 54px;
+    width: 325px;
+    background: $white;
+    border-radius: 4px 4px 0px 0px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    padding: 16px 271px 16px 24px;
+    border: 1px solid rgba(0, 82, 255, 0.08);
+}
+
+.dropdownContent {
+    background: #C4C4C4;
+    box-shadow: $shadowBottom2;
+    margin-top: 16px;
+}
+
+.contentFirst {
+    border-radius: 4px 4px 0px 0px;
+    color: $textColor;
+}
+
+.contentSecond {
+    border-radius: 0px;
+    color: $textColor;
+}
+
+.contentThird {
+    color: $textColor;
+    border-radius: 0px 0px 4px 4px;
+}
+
+
+/* 
+    checkbox 
+*/
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    border: $blueBorder;
+    border-radius: 4px;
+    background-color: $white;
+    position: relative;
+    span {
+        width: 100%;
+        display: none;
+        position: absolute;
+        line-height: 23px;
+        text-align: center;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+span {
+            display: block;
+            background-color: $blue;
+        }
+    }
+}
+
+.radio {
+    margin: 40px;
+    margin-left: 0px;
+    position: relative;
+    background-color: $white;
+    border: 2px solid $blue;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+span {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            display: block;
+            background-color: $blue;
+            border-radius: 50%;
+            /* left: 3px;
+            top: 3px; */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    height: 28px;
+    width: 48px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color: $white;
+    span {
+        width: 24px;
+        height: 24px;
+        background: #E6EEFF;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        top: 50%;
+        left: 1px;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+    }
+    input {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+        &:checked+span {
+            right: 1px;
+            left: auto;
+            background-color: $blue;
+        }
+    }
+}
